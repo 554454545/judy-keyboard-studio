@@ -1,8 +1,22 @@
 # JUDY Keyboard Studio
 
+**[在线试玩 → judy-keyboard-studio.pages.dev](https://judy-keyboard-studio.pages.dev/)**
+
 一个以键盘为主角的交互式 3D 网页：在冷黑色工作室里搭配键盘、定制键帽、试听键音，或进入带实景背景和音乐的全景模式。
 
 使用 **TypeScript + Three.js + Vite**，纯前端运行，无需后端、账户或实体键盘配对。模型由代码生成；这是键盘概念体验，不是硬件配置工具或商品销售页面。
+
+## 页面预览
+
+### 键盘工作室
+
+[![JUDY Keyboard Studio：首页与三维键盘](docs/images/keyboard-studio.jpg)](https://judy-keyboard-studio.pages.dev/)
+
+### 全景试打
+
+[![沉浸式键盘试打：极光背景与三维键盘](docs/images/immersive-typing.jpg)](https://judy-keyboard-studio.pages.dev/)
+
+预览图截自在线版本。打开网站即可体验旋转键盘、配色定制、按键音效与动态风景。
 
 ## 快速开始
 
@@ -68,6 +82,8 @@ npm run preview -- --port 4174    # 预览生产构建
 
 ## 部署
 
+当前在线版本部署于 **Cloudflare Pages**，使用免费 `pages.dev` 子域名，并连接本仓库自动构建。
+
 这是静态站点。托管平台设置：
 
 | 配置 | 值 |
@@ -77,7 +93,7 @@ npm run preview -- --port 4174    # 预览生产构建
 | 输出目录 | `dist` |
 | Node.js | 22.18 或更高版本 |
 
-可以部署到支持静态文件的托管平台。当前资源使用根路径，默认应部署到域名根目录；若部署到子目录，需要调整 Vite base 及代码中的资源路径。GitHub 仓库本身不等于已上线网站。
+可以部署到支持静态文件的托管平台。当前资源使用根路径，默认应部署到域名根目录；若部署到子目录，需要调整 Vite base 及代码中的资源路径。本项目在线地址见 README 顶部。
 
 ## 项目结构
 
