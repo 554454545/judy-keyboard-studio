@@ -1,0 +1,34 @@
+{
+  "name": "judy-keyboard-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test:browser": "node scripts/verify.mjs",
+    "test:model": "node --experimental-strip-types --test scripts/model.test.mjs",
+    "test:studio": "node scripts/verify-studio.mjs",
+    "test:night": "node scripts/verify-night.mjs",
+    "test:motion": "node scripts/verify-motion.mjs",
+    "test:scenery": "node scripts/verify-scenery.mjs",
+    "test:voices": "node scripts/verify-voices.mjs",
+    "test:atelier": "node scripts/verify-atelier.mjs",
+    "test:opening": "node scripts/verify-atelier-opening.mjs",
+    "test:wonders": "node scripts/verify-wonders.mjs",
+    "test:opening-sound": "node scripts/verify-opening-sound.mjs",
+    "test:wonder-motion": "node scripts/verify-wonder-motion.mjs",
+    "test:editorial": "node scripts/verify-editorial.mjs",
+    "test:obsidian": "node scripts/verify-obsidian.mjs"
+  },
+  "dependencies": {
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@types/three": "0.185.0",
+    "playwright": "1.63.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
+  }
+}

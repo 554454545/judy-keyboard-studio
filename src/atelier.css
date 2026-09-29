@@ -1,0 +1,726 @@
+.atelier {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #52635b;
+  color: #d4e3da;
+}
+.atelier header {
+  margin-bottom: 28px;
+}
+.atelier h3 {
+  font-size: 28px;
+  margin: 12px 0;
+}
+.atelier p {
+  color: #92a69b;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.atelier fieldset {
+  margin: 0 0 26px;
+  padding: 0;
+  border: 0;
+}
+.atelier legend {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #b8cfc2;
+}
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.material-grid button {
+  border: 1px solid #34463e;
+  border-radius: 12px;
+  background: #14221e;
+  padding: 12px 8px;
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+.material-grid button[aria-pressed="true"],
+.art-patterns button[aria-pressed="true"],
+.atelier-segments button[aria-pressed="true"] {
+  border-color: #b8e0c5;
+  background: #293c32;
+  color: #e4f8eb;
+}
+.material-sample {
+  display: block;
+  width: 48px;
+  height: 42px;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 2px 3px #ffffff50,
+    0 5px 9px #0006;
+  transform: perspective(90px) rotateX(16deg);
+}
+.sample-original {
+  background: #8fa29b;
+}
+.sample-ice {
+  background: linear-gradient(135deg, #e2ffffaa, #85c5d533, #efffffaa);
+  border: 1px solid #d2fbff99;
+}
+.sample-smoke {
+  background: linear-gradient(135deg, #516c7b, #151f2a99, #678798);
+}
+.sample-cream {
+  background: #d5c6a6;
+}
+.sample-metal {
+  background: repeating-linear-gradient(
+    0deg,
+    #89939e 0px,
+    #cbd4db 1px,
+    #9ca6ae 2px
+  );
+}
+.material-grid strong {
+  font-size: 12px;
+}
+.material-grid small {
+  font: 8px monospace;
+  color: #96aca0;
+}
+.atelier-segments,
+.art-patterns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.atelier-segments button,
+.art-patterns button,
+.art-target button,
+#inspect-key,
+#replay-assembly,
+#skip-assembly {
+  padding: 10px 12px;
+  border: 1px solid #40564a;
+  border-radius: 7px;
+  font-size: 12px;
+  background: #15231e;
+  color: #bfd2c6;
+}
+.atelier label {
+  font-size: 12px;
+  display: grid;
+  gap: 8px;
+}
+.atelier select,
+.atelier input[type="text"],
+.photo-settings select,
+.photo-settings input[type="text"] {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #456153;
+  border-radius: 6px;
+  background: #12201c;
+  color: #dceade;
+  padding: 10px;
+  font: inherit;
+}
+#light-pad {
+  height: 108px;
+  margin: 12px 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #304b3f;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at center, #36534877, transparent 70%), #14231e;
+  touch-action: none;
+  cursor: crosshair;
+}
+#light-pad > span {
+  position: absolute;
+  inset: 45% 0;
+  text-align: center;
+  font: 9px monospace;
+  letter-spacing: 2px;
+  color: #89a294;
+  pointer-events: none;
+}
+.light-orbit {
+  position: absolute;
+  inset: 18% 12%;
+  border: 1px solid #78948455;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+#light-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e3ffe5;
+  box-shadow: 0 0 24px 10px #b5ffd755;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.atelier-ranges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.atelier input[type="range"],
+.photo-settings input[type="range"] {
+  accent-color: #b9d5be;
+  width: 100%;
+}
+.art-target {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+.art-target > label {
+  flex: 1;
+  min-width: 0;
+}
+.art-preview {
+  background: #0e1a16;
+  border: 1px solid #334d40;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.art-preview canvas {
+  display: block;
+  width: 100%;
+  height: 94px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.art-preview span {
+  display: block;
+  font-size: 11px;
+  color: #adc5b5;
+  margin-top: 10px;
+}
+.art-text-label {
+  margin: 12px 0;
+}
+.art-upload {
+  cursor: pointer;
+  padding: 13px;
+  border: 1px dashed #6b927b;
+  border-radius: 7px;
+  margin: 12px 0;
+  position: relative;
+  text-align: center;
+}
+.art-upload input {
+  font-size: 11px;
+  max-width: 100%;
+}
+.atelier-bottom {
+  display: grid;
+  gap: 12px;
+}
+.atelier-bottom > label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.atelier-bottom small {
+  color: #8ea99a;
+}
+.atelier-primary {
+  border: 0;
+  border-radius: 8px;
+  background: #c3dfbe;
+  color: #17271d;
+  padding: 15px 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.atelier-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(1160px, 96vw);
+  max-width: 96vw;
+  height: 94dvh;
+  max-height: 94dvh;
+  padding: 22px;
+  border: 1px solid #456353;
+  border-radius: 18px;
+  background: #101c19;
+  color: #d9e9df;
+  overflow: auto;
+  margin: auto;
+}
+.atelier-dialog::backdrop {
+  background: #050b09e8;
+  backdrop-filter: blur(12px);
+}
+.atelier-dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.atelier-dialog-head h2 {
+  font-size: 24px;
+  margin: 7px 0;
+}
+.atelier-dialog-head button {
+  border: 1px solid #42594d;
+  padding: 10px;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  white-space: nowrap;
+}
+#atelier-stage {
+  position: relative;
+  width: 100%;
+  height: min(52dvh, 540px);
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #253c35, #101a17);
+}
+#atelier-stage[data-format="poster"] {
+  aspect-ratio: 4/5;
+  width: auto;
+  height: 48dvh;
+  margin: auto;
+  max-width: 100%;
+}
+.scene-host.atelier-scene {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  z-index: 1 !important;
+}
+.atelier-scene canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.atelier-dialog[data-mode="intro"] #atelier-stage {
+  height: 58dvh;
+}
+.atelier-dialog[data-mode="intro"] #assembly-controls {
+  text-align: center;
+}
+.atelier-dialog[data-mode="intro"] #assembly-controls p {
+  color: #9ab7a5;
+  font-size: 13px;
+}
+#photo-controls {
+  padding-top: 16px;
+}
+.photo-settings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+.photo-settings label {
+  display: grid;
+  gap: 7px;
+  font-size: 11px;
+  color: #a9c5b4;
+}
+#photo-status {
+  font-size: 12px;
+  color: #9ab3a4;
+  display: inline-block;
+  margin: 12px;
+}
+#assembly-controls[hidden],
+#photo-controls[hidden] {
+  display: none;
+}
+.selecting-key {
+  cursor: crosshair !important;
+}
+.atelier button:focus-visible,
+.atelier-dialog button:focus-visible,
+#light-pad:focus-visible {
+  outline: 2px solid #cdf4d7;
+  outline-offset: 3px;
+}
+.micro-actions {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+.micro-actions button {
+  padding: 12px;
+  border: 1px solid #486359;
+  border-radius: 6px;
+  color: #cee4d9;
+  background: #182d26;
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .atelier-dialog {
+    padding: 14px;
+    width: 96vw;
+  }
+  .atelier-dialog-head h2 {
+    font-size: 19px;
+  }
+  .photo-settings {
+    grid-template-columns: 1fr 1fr;
+  }
+  #atelier-stage {
+    height: 40dvh;
+  }
+  .atelier-dialog[data-mode="intro"] #atelier-stage {
+    height: 52dvh;
+  }
+  .material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .material-grid small {
+    font-size: 7px;
+  }
+  .art-target {
+    flex-wrap: wrap;
+  }
+  .art-target > label {
+    min-width: 120px;
+  }
+  #photo-status {
+    margin-left: 0;
+  }
+  .atelier-dialog .atelier-segments button {
+    padding: 9px;
+  }
+  #assembly-controls button {
+    margin-bottom: 8px;
+  }
+}
+.atelier-dialog[data-mode="photo"] #atelier-stage[data-format="wide"] {
+  width: min(100%, calc(52dvh * 16 / 9));
+  height: auto;
+  aspect-ratio: 16/9;
+  margin: auto;
+}
+.photo-caption {
+  position: absolute;
+  left: 5.5%;
+  bottom: 6%;
+  right: 5.5%;
+  z-index: 2;
+  pointer-events: none;
+  display: grid;
+  gap: 10px;
+}
+.photo-caption strong {
+  font:
+    clamp(12px, 1.5vw, 24px) Arial,
+    sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.photo-caption small {
+  font: clamp(6px, 0.6vw, 10px) monospace;
+  letter-spacing: 1px;
+}
+#atelier-stage[data-format="poster"] .photo-caption strong {
+  font-size: 12px;
+}
+#atelier-stage[data-format="poster"] .photo-caption small {
+  font-size: 6px;
+}
+.atelier-dialog[data-mode="intro"] .photo-caption {
+  display: none;
+}
+@media (max-width: 700px) {
+  .atelier-dialog[data-mode="photo"] #atelier-stage[data-format="wide"] {
+    width: 100%;
+    height: auto;
+  }
+  .atelier-dialog[data-mode="photo"] #atelier-stage[data-format="poster"] {
+    height: 40dvh;
+  }
+  .photo-caption {
+    gap: 5px;
+  }
+  .photo-caption strong {
+    font-size: 10px;
+  }
+  .photo-caption small {
+    font-size: 5px;
+  }
+  .atelier header {
+    margin-bottom: 20px;
+  }
+  .atelier fieldset {
+    margin-bottom: 22px;
+  }
+}
+.craft-tabs {
+  display: flex;
+  border-bottom: 1px solid #40574b;
+  gap: 8px;
+  margin: 22px 0;
+}
+.craft-tabs button {
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #8fa99b;
+  font-size: 13px;
+}
+.craft-tabs button[aria-selected="true"] {
+  color: #e3f3e7;
+  border-bottom-color: #c2e4cb;
+}
+.atelier fieldset[hidden] {
+  display: none;
+}
+.atelier .pair-material {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a7c4b1;
+}
+.pair-material input {
+  accent-color: #b9d7bf;
+}
+.craft-shortcut {
+  border: 0;
+  border-bottom: 1px solid #a6b8a9;
+  background: transparent;
+  color: #b9ccbf;
+  font-size: 10px;
+  padding: 6px 0;
+}
+.atelier {
+  scroll-margin-top: 32px;
+}
+@media (max-width: 700px) {
+  .atelier {
+    scroll-margin-top: 320px;
+  }
+  .craft-tabs button {
+    padding: 12px;
+  }
+  .craft-shortcut {
+    font-size: 9px;
+  }
+}
+.assembly-label {
+  display: none;
+  position: absolute;
+  left: 6%;
+  top: 7%;
+  font-size: clamp(50px, 10vw, 140px);
+  line-height: 0.86;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: #9dcdb211;
+  pointer-events: none;
+}
+.atelier-dialog[data-mode="intro"] .assembly-label {
+  display: block;
+}
+#assembly-controls {
+  padding-top: 20px;
+}
+#assembly-controls p {
+  margin-bottom: 18px;
+}
+#skip-assembly {
+  margin-left: 12px;
+}
+.craft-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+.craft-tabs button {
+  padding: 12px 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.world-target {
+  font-size: 12px;
+  color: #a9c9ba;
+}
+.world-target strong {
+  color: #d5f2e1;
+}
+.world-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.world-cards button {
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+  border: 1px solid #3d6158;
+  border-radius: 12px;
+  display: grid;
+  align-content: end;
+  gap: 7px;
+  padding: 16px;
+  text-align: left;
+  background:
+    radial-gradient(ellipse at 50% 0, #35676488, transparent 75%), #142120;
+  color: #d5ebe3;
+}
+.world-cards button[data-world="moon"] {
+  background:
+    radial-gradient(circle at 70% 20%, #697b9755, transparent 60%), #18202f;
+}
+.world-cards button[data-world="jelly"] {
+  background:
+    radial-gradient(circle at 40% 20%, #6754ab99, transparent 70%), #122b3b;
+}
+.world-cards button[data-world="garden"] {
+  background:
+    radial-gradient(circle at 60% 20%, #54794988, transparent 70%), #1d2921;
+}
+.world-cards i {
+  font-style: normal;
+  font-size: 40px;
+  color: #bce8dd;
+}
+.world-cards strong {
+  font-size: 14px;
+}
+.world-cards small {
+  font: 8px monospace;
+  letter-spacing: 2px;
+  color: #92b7a8;
+}
+.world-cards button[aria-pressed="true"] {
+  border-color: #c9f7dc;
+  box-shadow: inset 0 0 30px #b6ead511;
+}
+.world-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.world-actions button {
+  padding: 12px;
+  border: 1px solid #597568;
+  border-radius: 7px;
+  background: #213a30;
+  color: #d1e8da;
+  font-size: 12px;
+}
+.wonder-controls {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid #465768;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 100% 0, #61517c44, transparent 70%), #151d26;
+  display: grid;
+  gap: 12px;
+}
+.wonder-controls h4 {
+  font-size: 19px;
+  margin: 8px 0;
+}
+.wonder-controls p {
+  margin: 0;
+}
+.wonder-controls button {
+  padding: 13px;
+  border: 1px solid #67858c;
+  border-radius: 8px;
+  background: #26353e;
+  color: #c8e6e2;
+  font-size: 12px;
+}
+.wonder-controls button[aria-pressed="true"] {
+  background: #355548;
+}
+.wonder-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#portal-hold {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(120deg, #3b345a, #254a49);
+  touch-action: none;
+  user-select: none;
+}
+#portal-hold:active {
+  box-shadow: 0 0 35px #a397e550;
+}
+#gravity-attract[hidden] {
+  display: none;
+}
+#gravity-attract {
+  touch-action: none;
+  user-select: none;
+}
+.intro-sound-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #a8c4b5;
+  font-size: 12px;
+  margin: 0 0 14px;
+}
+.atelier-dialog[data-intro-audio="playing"] #assembly-status {
+  color: #d2f7e3;
+}
+#scene-host.selecting-key {
+  outline: 1px solid #8cceaf55;
+  outline-offset: -8px;
+}
+.scene-host[data-selected-key]:not([data-selected-key=""])::after {
+  content: "SELECTED / " attr(data-selected-key);
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+  color: #bcf5d8;
+  background: #0b1d18cc;
+  border: 1px solid #739f8d;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font: 10px monospace;
+  pointer-events: none;
+}
+.atelier-dialog .scene-host::after {
+  display: none;
+}
+@media (max-width: 700px) {
+  .world-cards button {
+    padding: 12px;
+    min-height: 140px;
+  }
+  .wonder-controls {
+    padding: 16px;
+  }
+  .craft-tabs button {
+    font-size: 11px;
+  }
+  .scene-host[data-selected-key]:not([data-selected-key=""])::after {
+    bottom: 12px;
+    font-size: 8px;
+  }
+}
+.atelier-dialog[data-mode="photo"] #atelier-stage::after {
+  content: "";
+  position: absolute;
+  inset: 68% 0 0;
+  background: linear-gradient(transparent, #07120fe8);
+  pointer-events: none;
+  z-index: 2;
+}
+.photo-caption {
+  z-index: 3;
+}

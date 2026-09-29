@@ -1,0 +1,775 @@
+/* Studio 03: form library, mechanical study and the typing room. */
+.keyboard-mini {
+  display: block;
+  width: 100%;
+  height: 64px;
+  overflow: visible;
+}
+.form-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+.form-options button {
+  padding: 13px 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.form-options button[aria-pressed="true"] {
+  background: #e0e6db;
+  border-color: #657868;
+}
+.form-options strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.form-options small {
+  display: block;
+  font: 6px var(--mono);
+  color: #838a7e;
+  margin-top: 7px;
+  letter-spacing: 0.7px;
+}
+.form-options button:hover,
+.palette-option:hover {
+  background: #e8e9e0;
+  border-color: #8a998a;
+}
+.palette-options {
+  gap: 9px;
+}
+.palette-option {
+  padding: 13px 11px;
+  min-width: 0;
+}
+.palette-option .keyboard-mini {
+  height: 53px;
+  margin: 4px 0 13px;
+  filter: drop-shadow(0 4px 2px #24322b17);
+}
+.palette-option > .palette-swatches {
+  display: flex;
+  height: 5px;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.palette-swatches i {
+  flex: 1;
+  border-radius: 1px;
+  box-shadow: inset 0 0 0 1px #0000000b;
+}
+.palette-option > span:not(.palette-swatches) {
+  font-size: 11px;
+}
+.palette-option small {
+  font-size: 6px;
+}
+.product-heading h3 {
+  font-size: 38px;
+}
+#product-form {
+  letter-spacing: -2px;
+}
+.play-entry-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.immersive-entry {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #dce9cc;
+  border: 1px solid #a5b593;
+  padding: 16px 21px;
+  font-size: 12px;
+}
+.immersive-entry span {
+  font-size: 21px;
+  line-height: 1;
+}
+.immersive-entry:hover {
+  background: #c9dcb4;
+}
+/* Interactive specimen */
+.details {
+  background: #182723;
+  color: #eeefde;
+  position: relative;
+  overflow: hidden;
+}
+.details .section-heading {
+  border-color: #8b9b803d;
+}
+.details .section-heading > span {
+  color: #a0ad9b;
+}
+.anatomy-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 50px 0 45px;
+  gap: 40px;
+}
+.anatomy-heading .tiny {
+  color: #98ac8f;
+  letter-spacing: 2px;
+}
+.anatomy-heading h2 {
+  font-size: clamp(38px, 4.8vw, 70px);
+  font-weight: 500;
+  letter-spacing: -3px;
+  line-height: 1.25;
+  margin-top: 18px;
+}
+.anatomy-heading h2 em {
+  color: #c0d78d;
+  font-style: normal;
+}
+.anatomy-heading > p {
+  font-size: 12px;
+  line-height: 2.2;
+  color: #a3b19d;
+  padding-bottom: 8px;
+}
+.anatomy-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border: 1px solid #95a5863d;
+}
+.specimen {
+  min-height: 600px;
+  position: relative;
+  background: radial-gradient(
+    ellipse at 38% 46%,
+    #34453a,
+    #21322b 60%,
+    #1c2b26
+  );
+  overflow: hidden;
+}
+.specimen-index {
+  position: absolute;
+  top: 25px;
+  left: 26px;
+  color: #c6d6b6;
+  font: 20px var(--mono);
+  line-height: 1.5;
+}
+.specimen-index b {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+.specimen-scale {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  writing-mode: vertical-rl;
+  font: 7px var(--mono);
+  letter-spacing: 2px;
+  color: #82977c;
+}
+.part-labels {
+  position: absolute;
+  right: 22px;
+  top: 21%;
+  width: 122px;
+  display: grid;
+  gap: 32px;
+}
+.part-labels button {
+  position: relative;
+  text-align: left;
+  font-size: 10px;
+  color: #a9b8a3;
+  padding: 8px 0 8px 25px;
+  border: 0;
+  background: transparent;
+}
+.part-labels button:before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  left: -40px;
+  top: 20px;
+  height: 1px;
+  background: #aec69542;
+}
+.part-labels i {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  font: 8px var(--mono);
+  font-style: normal;
+  color: #708b68;
+}
+.part-labels span {
+  display: block;
+  font: 7px var(--mono);
+  letter-spacing: 1.2px;
+  color: #6c866c;
+  margin-top: 6px;
+}
+.part-labels button[aria-pressed="true"] {
+  color: #e7eecd;
+}
+.part-labels button[aria-pressed="true"] i {
+  color: #c7df8d;
+}
+.explode-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  padding-top: 23px;
+  border-top: 1px solid #a1b18b30;
+  color: #b5c0a6;
+  font-size: 9px;
+}
+.explode-control input {
+  flex: 1;
+  width: 50px;
+  accent-color: #c4d990;
+}
+.explode-control output {
+  width: 35px;
+  text-align: right;
+  font: 9px var(--mono);
+  color: #d5e2aa;
+}
+.anatomy-console {
+  padding: 28px 35px;
+  border-left: 1px solid #95a5863d;
+  display: flex;
+  flex-direction: column;
+  background: #17231f;
+}
+.console-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font: 7px var(--mono);
+  letter-spacing: 1px;
+  color: #95a886;
+}
+.console-top .status-dot {
+  background: #c6d78e;
+  width: 5px;
+  height: 5px;
+}
+.part-story {
+  margin: 62px 0 35px;
+  min-height: 155px;
+}
+.part-story > span {
+  font: 8px var(--mono);
+  color: #c2d788;
+  letter-spacing: 1.2px;
+}
+.part-story h3 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 17px 0 20px;
+  line-height: 1.5;
+}
+.part-story p {
+  color: #98ab97;
+  font-size: 11px;
+  line-height: 2.1;
+  max-width: 300px;
+}
+.signal-window {
+  background: #101c17;
+  border: 1px solid #8da07c24;
+  padding: 16px 16px 12px;
+  margin-top: auto;
+}
+.signal-window > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font: 6px var(--mono);
+  letter-spacing: 0.6px;
+  color: #92a381;
+}
+.signal-window svg {
+  width: 100%;
+  height: 82px;
+  margin-top: 7px;
+}
+.signal-baseline {
+  stroke: #51614a;
+  stroke-width: 0.7;
+  fill: none;
+}
+.signal-wave {
+  stroke: #cae68d;
+  stroke-width: 1.4;
+  fill: none;
+  opacity: 0.25;
+  transform: scaleY(0.06);
+  transform-origin: 50% 50%;
+}
+.signal-window > .tiny {
+  color: #71866c;
+  font-size: 8px;
+}
+.detail-strike {
+  margin-top: 20px;
+  padding: 17px 19px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  background: #c6d799;
+  color: #233022;
+  font-size: 12px;
+  border: 0;
+}
+.detail-strike:hover {
+  background: #d9e7b5;
+}
+.detail-strike span {
+  font-size: 22px;
+  line-height: 1;
+}
+.anatomy-note {
+  font-size: 8px;
+  color: #7d9075;
+  line-height: 1.8;
+  margin-top: 13px;
+}
+.anatomy-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 31px;
+}
+.anatomy-bottom > span {
+  font: 8px var(--mono);
+  color: #7b9072;
+  letter-spacing: 1px;
+}
+.anatomy-bottom > strong {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aebe9c;
+}
+.anatomy-bottom a {
+  font-size: 10px;
+  color: #d0dea7;
+  border-bottom: 1px solid #a4b18d60;
+  padding-bottom: 5px;
+}
+.anatomy-console.striking .signal-wave {
+  animation: signal-strike 0.65s ease-out;
+}
+@keyframes signal-strike {
+  0% {
+    transform: scaleY(0.05);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0.06);
+    opacity: 0.25;
+  }
+}
+/* An isolated fullscreen stage. UI fades; focus and pointer wake it. */
+.immersive[hidden] {
+  display: none;
+}
+.immersive {
+  --room-ink: #dde8dd;
+  --room-line: #e0f5e02a;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  isolation: isolate;
+  color: var(--room-ink);
+  background: #131d26;
+  overflow: hidden;
+}
+.immersive:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+#immersive-scene-anchor {
+  position: absolute;
+  inset: 9% 3% 15%;
+}
+.scene-host.in-immersive {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  outline: 0;
+}
+.immersive-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 40px;
+  z-index: 3;
+}
+.immersive-brand {
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1.6px;
+}
+.immersive-brand span {
+  font: 8px var(--mono);
+  letter-spacing: 1.5px;
+  margin-left: 19px;
+  vertical-align: middle;
+  opacity: 0.65;
+}
+#fullscreen-state {
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.55;
+}
+#exit-immersive {
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--room-line);
+  padding: 10px 15px;
+  font-size: 10px;
+}
+#exit-immersive kbd {
+  border: 1px solid var(--room-line);
+  margin: 0 5px 0 12px;
+  padding: 2px 5px;
+  font: 8px var(--mono);
+}
+.immersive-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 20px 40px 25px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(transparent, #0b182312);
+}
+.atmosphere-options {
+  display: flex;
+  gap: 15px;
+}
+.atmosphere-options button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 2px;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  font-size: 9px;
+  opacity: 0.65;
+}
+.atmosphere-options button[aria-pressed="true"] {
+  opacity: 1;
+  border-bottom-color: currentColor;
+}
+.atmosphere-options i {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--room-line);
+}
+.immersive-actions {
+  display: flex;
+  gap: 22px;
+  margin-left: auto;
+  align-items: center;
+}
+.immersive-actions button {
+  color: inherit;
+  font-size: 10px;
+  background: transparent;
+  border: 0;
+  padding: 8px 0;
+}
+.immersive-actions label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 9px;
+}
+.immersive-actions input {
+  width: 75px;
+  accent-color: #a7bc9b;
+}
+.immersive-bottom > p {
+  font-size: 8px;
+  letter-spacing: 1px;
+  opacity: 0.45;
+  flex-basis: 100%;
+  text-align: center;
+}
+.immersive-ui {
+  transition:
+    opacity 0.6s,
+    transform 0.6s;
+}
+.immersive.ui-hidden .immersive-ui {
+  opacity: 0;
+  pointer-events: none;
+}
+.immersive.ui-hidden .immersive-top {
+  transform: translateY(-12px);
+}
+.immersive.ui-hidden .immersive-bottom {
+  transform: translateY(12px);
+}
+.immersive.ui-hidden .immersive-ui:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+@media (max-width: 1100px) {
+  .anatomy-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+  .part-labels {
+    right: 15px;
+    width: 108px;
+  }
+  .part-labels button:before {
+    width: 15px;
+    left: -20px;
+  }
+  .anatomy-console {
+    padding: 26px 24px;
+  }
+  .part-story h3 {
+    font-size: 23px;
+  }
+  .play-entry-actions {
+    justify-content: flex-end;
+    max-width: 330px;
+  }
+  .immersive-entry,
+  .connect-button {
+    padding: 13px 16px;
+  }
+  .immersive-bottom {
+    gap: 12px;
+  }
+  .immersive-actions {
+    gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .form-options {
+    gap: 7px;
+  }
+  .form-options button {
+    padding: 10px 8px;
+  }
+  .form-options .keyboard-mini {
+    height: 49px;
+  }
+  .form-options strong {
+    font-size: 11px;
+  }
+  .form-options small {
+    font-size: 5px;
+    letter-spacing: 0;
+  }
+  .palette-option {
+    padding: 10px 8px;
+  }
+  .palette-option .keyboard-mini {
+    height: 38px;
+  }
+  .palette-option > span:not(.palette-swatches) {
+    font-size: 10px;
+  }
+  .palette-option small {
+    font-size: 5px;
+  }
+  .play-entry-actions {
+    margin-top: 22px;
+    justify-content: flex-start;
+    max-width: none;
+    gap: 10px;
+  }
+  .play-entry-actions .connect-button {
+    margin-top: 0;
+  }
+  .immersive-entry {
+    font-size: 11px;
+  }
+  .anatomy-heading {
+    display: block;
+    margin: 32px 0;
+  }
+  .anatomy-heading h2 {
+    font-size: 44px;
+    margin-top: 16px;
+    letter-spacing: -2px;
+  }
+  .anatomy-heading .tiny {
+    font-size: 7px;
+  }
+  .anatomy-heading > p {
+    font-size: 11px;
+    margin-top: 23px;
+  }
+  .anatomy-grid {
+    grid-template-columns: 1fr;
+  }
+  .specimen {
+    min-height: 520px;
+  }
+  .specimen-index {
+    left: 17px;
+    top: 18px;
+    font-size: 17px;
+  }
+  .specimen-index b {
+    font-size: 6px;
+  }
+  .specimen-scale {
+    right: 14px;
+    top: 20px;
+    font-size: 6px;
+  }
+  .part-labels {
+    right: 7px;
+    top: 22%;
+    width: 93px;
+    gap: 26px;
+  }
+  .part-labels button {
+    font-size: 9px;
+    padding-left: 19px;
+  }
+  .part-labels span {
+    font-size: 6px;
+  }
+  .part-labels button:before {
+    display: none;
+  }
+  .explode-control {
+    left: 17px;
+    right: 17px;
+    gap: 10px;
+  }
+  .anatomy-console {
+    border-left: 0;
+    border-top: 1px solid #95a5863d;
+    padding: 23px;
+  }
+  .part-story {
+    margin: 33px 0 30px;
+    min-height: 135px;
+  }
+  .part-story h3 {
+    font-size: 24px;
+  }
+  .part-story p {
+    font-size: 12px;
+  }
+  .anatomy-bottom {
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+  .anatomy-bottom > span {
+    flex-basis: 100%;
+    font-size: 7px;
+  }
+  .anatomy-bottom > strong {
+    font-size: 13px;
+  }
+  .anatomy-bottom a {
+    margin-left: auto;
+    font-size: 9px;
+  }
+  .immersive-top {
+    padding: 20px;
+    gap: 12px;
+  }
+  .immersive-brand {
+    font-size: 28px;
+  }
+  .immersive-brand span {
+    display: none;
+  }
+  #fullscreen-state {
+    font-size: 8px;
+  }
+  #exit-immersive {
+    padding: 9px;
+    font-size: 9px;
+  }
+  #exit-immersive kbd {
+    margin-left: 3px;
+    font-size: 7px;
+  }
+  #immersive-scene-anchor {
+    inset: 12% 0 22%;
+  }
+  .immersive-bottom {
+    padding: 16px 20px 22px;
+    gap: 13px;
+    justify-content: center;
+  }
+  .atmosphere-options {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .atmosphere-options button {
+    gap: 6px;
+    font-size: 8px;
+  }
+  .atmosphere-options i {
+    width: 22px;
+    height: 22px;
+  }
+  .immersive-actions {
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .immersive-bottom > p {
+    font-size: 7px;
+    letter-spacing: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anatomy-console.striking .signal-wave {
+    animation: none;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

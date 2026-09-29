@@ -1,0 +1,4 @@
+JUDY / NIGHT STUDIES
+Ten original procedural instrumental compositions created for this project.
+Composed and synthesized by scripts/compose-music.py. No third-party audio samples or borrowed melodies.
+Music is separate from keyboard sound effects.

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "after-rain",
+    "name": "雨后窗边",
+    "english": "AFTER THE RAIN",
+    "mood": "钢琴 · 雨声",
+    "bpm": 68,
+    "duration": 61,
+    "src": "/music/after-rain.mp3"
+  },
+  {
+    "id": "blue-hour",
+    "name": "蓝色时刻",
+    "english": "BLUE HOUR",
+    "mood": "电钢 · 慢拍",
+    "bpm": 76,
+    "duration": 56,
+    "src": "/music/blue-hour.mp3"
+  },
+  {
+    "id": "moon-tide",
+    "name": "月面潮汐",
+    "english": "MOON TIDE",
+    "mood": "氛围 · 长音",
+    "bpm": 58,
+    "duration": 71,
+    "src": "/music/moon-tide.mp3"
+  },
+  {
+    "id": "paper-lantern",
+    "name": "纸灯",
+    "english": "PAPER LANTERN",
+    "mood": "拨弦 · 暖光",
+    "bpm": 74,
+    "duration": 57,
+    "src": "/music/paper-lantern.mp3"
+  },
+  {
+    "id": "moss-garden",
+    "name": "苔藓花园",
+    "english": "MOSS GARDEN",
+    "mood": "木琴 · 呼吸",
+    "bpm": 64,
+    "duration": 65,
+    "src": "/music/moss-garden.mp3"
+  },
+  {
+    "id": "night-train",
+    "name": "夜行列车",
+    "english": "NIGHT TRAIN",
+    "mood": "电钢 · 低频",
+    "bpm": 82,
+    "duration": 52,
+    "src": "/music/night-train.mp3"
+  },
+  {
+    "id": "distant-shore",
+    "name": "远岸",
+    "english": "DISTANT SHORE",
+    "mood": "氛围 · 海浪",
+    "bpm": 60,
+    "duration": 69,
+    "src": "/music/distant-shore.mp3"
+  },
+  {
+    "id": "soft-orbit",
+    "name": "柔软轨道",
+    "english": "SOFT ORBIT",
+    "mood": "钟琴 · 浮光",
+    "bpm": 72,
+    "duration": 58,
+    "src": "/music/soft-orbit.mp3"
+  },
+  {
+    "id": "last-page",
+    "name": "最后一页",
+    "english": "THE LAST PAGE",
+    "mood": "钢琴 · 留白",
+    "bpm": 66,
+    "duration": 63,
+    "src": "/music/last-page.mp3"
+  },
+  {
+    "id": "slow-satellite",
+    "name": "慢速卫星",
+    "english": "SLOW SATELLITE",
+    "mood": "合成器 · 漫游",
+    "bpm": 78,
+    "duration": 54,
+    "src": "/music/slow-satellite.mp3"
+  }
+]

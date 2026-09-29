@@ -1,0 +1,231 @@
+/* Entrance choreography, tactile responses and the resonance chamber. */
+@keyframes enter-copy {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(9px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes enter-object {
+  from {
+    opacity: 0;
+    transform: translate(8%, 12%) rotate(-7deg);
+    filter: blur(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes entrance-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.hero-copy h1 span,
+.hero-copy h1 em {
+  animation: enter-copy 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-copy h1 em {
+  animation-delay: 0.18s;
+}
+.hero-caption {
+  animation: enter-copy 1.1s 0.4s both;
+}
+.hero-topline,
+.hero-object-label,
+.hero-bottom,
+.hero-annotation {
+  animation: enter-copy 1s 0.65s both;
+}
+.hero > .scene-host {
+  animation: enter-object 1.7s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8bbfb8, transparent);
+  transform-origin: left;
+  animation: entrance-line 1.7s 0.4s both;
+  pointer-events: none;
+}
+#demo-word {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-height: 46px;
+  font:
+    italic 600 clamp(24px, 3vw, 39px) "DM Sans",
+    "Noto Sans SC",
+    sans-serif;
+  letter-spacing: -1.5px;
+  color: #d5fff0;
+  text-shadow: 0 0 20px #70ffd888;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+#demo-word.typing {
+  opacity: 1;
+}
+#demo-word.typing::after {
+  content: "_";
+  color: #9cfad8;
+}
+#demo-word.vanish {
+  animation: word-pass 1.05s ease-out both;
+}
+@keyframes word-pass {
+  0%,
+  25% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  55% {
+    opacity: 0.8;
+    transform: translateX(9px) skewX(-8deg);
+    text-shadow:
+      -8px 0 #9e8aff,
+      8px 0 #69ffe1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(75px);
+    filter: blur(12px);
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.details {
+  background:
+    radial-gradient(ellipse at 20% 55%, #142333, transparent 65%), #0b1018;
+}
+.anatomy-heading h2 em {
+  color: #adbae9;
+}
+.specimen {
+  background:
+    radial-gradient(ellipse at 43% 40%, #1c294944, transparent 64%), #080f1b;
+  isolation: isolate;
+  border-color: #91aef32b;
+  min-height: 690px;
+}
+.specimen-index,
+.specimen-scale,
+.specimen-drag {
+  color: #8095bd;
+}
+.specimen-index b {
+  color: #b7cbea;
+}
+.part-labels button {
+  color: #849bbd;
+}
+.part-labels button[aria-pressed="true"] {
+  color: #a9fff0;
+  text-shadow: 0 0 16px #6cf7dd55;
+}
+.part-labels button[aria-pressed="true"]:before {
+  background: #a9fff0;
+  box-shadow: 0 0 15px #65ffe2;
+}
+.anatomy-console {
+  background: linear-gradient(140deg, #152036, #0b121e);
+  border-color: #829ec82b;
+}
+.console-top,
+.part-story > span {
+  color: #99afda;
+}
+.signal-window {
+  background:
+    repeating-linear-gradient(0deg, #b3c6ff08 0 1px, transparent 1px 14px),
+    #09101c;
+}
+.signal-wave {
+  stroke: #9ef9df;
+  filter: drop-shadow(0 0 5px #66ffdc);
+}
+.detail-strike {
+  background: #b8c9f0;
+  color: #121a2b;
+  box-shadow: 0 0 35px #7c9dd516;
+}
+.specimen.striking {
+  box-shadow:
+    inset 0 0 100px #75e7e721,
+    0 0 40px #6bd2ee15;
+}
+.immersive-actions {
+  flex-wrap: wrap;
+}
+.immersive-actions select {
+  max-width: 105px;
+  background: #111c22;
+  color: #cdded7;
+  border: 1px solid #a5bfa833;
+  padding: 7px;
+  font: inherit;
+}
+@media (max-width: 700px) {
+  .specimen {
+    min-height: 570px;
+  }
+  #demo-word {
+    font-size: 25px;
+  }
+  .immersive-actions {
+    gap: 8px;
+  }
+  .immersive-actions select {
+    max-width: 93px;
+    padding: 5px;
+  }
+  .lab-settings {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy h1 span,
+  .hero-copy h1 em,
+  .hero-caption,
+  .hero-topline,
+  .hero-object-label,
+  .hero-bottom,
+  .hero-annotation,
+  .hero > .scene-host,
+  .hero::after {
+    animation: none;
+  }
+  #demo-word.vanish {
+    animation: reduced-word 1.2s both;
+  }
+  @keyframes reduced-word {
+    0%,
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

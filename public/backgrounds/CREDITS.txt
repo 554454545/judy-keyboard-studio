@@ -1,0 +1,5 @@
+JUDY scenery backgrounds
+Source: Mixkit; each selected item explicitly carries the Stock Video Free License.
+License: https://mixkit.co/license/#videoFree
+Verified: 2026-09-29. All footage is used within the keyboard experience; no standalone stock download UI.
+Edits: silent H.264, maximum 720p, 24 fps, trimmed and crossfaded into loops. See sources.json for authors, source pages and exact files.

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+artifacts/
+*.local
+
+.env
+.env.*
+*.log
+.DS_Store
+__pycache__/
+
+# Local planning notes
+/IDEAS.md
